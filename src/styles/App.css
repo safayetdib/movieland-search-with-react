@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+	color: lightgrey;
+}
+
+:root {
+	--font-roboto: 'Roboto Slab', serif;
+	--font-raleway: 'Raleway', sans-serif;
+}
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #121212;
+}
+
+.app {
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	margin-top: 10px;
+	display: flex;
+	gap: 10px;
+}
+.logo img {
+	border-radius: 10px;
+}
+.logo h1 {
+	font-family: 'Covered By Your Grace', cursive;
+	color: white;
+}
+
+.search-bar {
+	padding: 10px;
+	margin: 20px 10px;
+	display: flex;
+	border: 1px solid #1f1b24;
+	border-radius: 10px;
+	background-color: #1f1b24;
+}
+.search-bar input {
+	width: 300px;
+	padding: 10px;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 22px;
+	border: none;
+	outline: none;
+	background-color: #1f1b24;
+}
+.search-bar img {
+	width: 50px;
+	cursor: pointer;
+}
+.search-bar:hover,
+.search-bar:focus-within {
+	border: 1px solid blueviolet;
+}
+
+/* ===Movie Cards Container=== */
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	padding: 10px;
+}
+
+/* ===Movie Card=== */
+.movie-card {
+	width: 310px;
+	height: 460px;
+	margin: 1.5rem;
+	border-radius: 5px;
+	padding: 10px;
+	background-color: #1f1b24;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.movie-card:hover {
+	box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+	transform: scale(1.05, 1.05);
+}
+
+.movie-year {
+	margin-bottom: 5px;
+}
+.movie-poster img {
+	width: 100%;
+	height: 400px;
+}
+.movie-title {
+	z-index: 2;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: #1f1b24;
+	padding: 10px;
+}
+
+@media screen and (max-width: 780px) {
+	.search-bar input {
+		width: 220px;
+		font-size: 18px;
+	}
+	.search-bar img {
+		width: 40px;
+	}
+}
